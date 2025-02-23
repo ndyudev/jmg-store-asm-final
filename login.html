@@ -61,7 +61,7 @@
                 <p>Chào mừng bạn trở lại! Đăng nhập để khám phá thế giới công nghệ tại DSV Shop.</p>
                 
                 <!-- Form đăng nhập truyền thống -->
-                <form class="login-form">
+                <form class="login-form" id="loginForm">
                     <div class="form-group">
                         <label for="username">Tên đăng nhập hoặc Email:</label>
                         <input type="text" id="username" placeholder="Nhập tên đăng nhập hoặc email" required>
@@ -132,12 +132,32 @@
         </footer>
     </div>
 
-    <!-- JavaScript cho toggle menu trên mobile -->
+    <!-- JavaScript cho toggle menu và xử lý đăng nhập -->
     <script>
+        // Toggle menu trên mobile
         const navToggle = document.querySelector('.nav-toggle');
         const menu = document.querySelector('.menu');
         navToggle.addEventListener('click', () => {
             menu.classList.toggle('active');
+        });
+
+        // Xử lý đăng nhập
+        const loginForm = document.getElementById('loginForm');
+        loginForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Ngăn form submit mặc định
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Kiểm tra đơn giản (có thể thay bằng logic thực tế nếu có backend)
+            if (username && password) {
+                alert('Đăng nhập thành công!');
+                setTimeout(() => {
+                    window.location.href = 'index.html'; // Chuyển về trang chủ sau 1 giây
+                }, 1000);
+            } else {
+                alert('Vui lòng nhập đầy đủ thông tin!');
+            }
         });
     </script>
 </body>

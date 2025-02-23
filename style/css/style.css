@@ -42,6 +42,7 @@ body {
     top: 0;
     z-index: 1000;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: #b71c1c solid 1px;
 }
 
 .navbar {
@@ -291,7 +292,7 @@ body {
 /* Banner */
 .banner {
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin: 0;
     overflow: hidden;
     position: relative;
@@ -345,9 +346,11 @@ body {
     transition: all 0.4s ease;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .banner-btn:hover {
+    color:#d32f2f;
     background: linear-gradient(135deg, #ffcc00, #ffd700);
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -497,6 +500,85 @@ body {
 .product-item button:hover {
     background: linear-gradient(135deg, #ffcc00, #ffd700);
     transform: scale(1.1);
+}
+
+/* Promo Button */
+.promo-btn {
+    background: linear-gradient(135deg, #d32f2f, #ff4444);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.promo-btn:hover {
+    background: linear-gradient(135deg, #ffcc00, #ffd700);
+    transform: scale(1.05);
+}
+
+/* Product Buttons */
+.product-item {
+    position: relative;
+}
+
+.detail-btn, .buy-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+}
+
+.detail-btn {
+    background: transparent;
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+}
+
+.detail-btn:hover {
+    background: #d32f2f;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn {
+    background: linear-gradient(135deg, #d32f2f, #ff4444);
+    color: #fff;
+    border: none;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(135deg, #ffcc00, #ffd700);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 0;
+    }
 }
 
 /* Testimonials Section */

@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 300px); /* Đảm bảo form ở giữa */
+    min-height: calc(100vh - 300px);
 }
 
 .login-container {
