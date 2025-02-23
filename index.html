@@ -3,124 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JMaxGear Sport</title>
-    <link rel="stylesheet" href="./style/css/style.css">
-    <script src="script.js" defer></script>
+    <title>Home | DSV Shop</title>
+    <link rel="stylesheet" href="/style/css/style.css">
+    <link rel="stylesheet" href="./style/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="icon" href="../img/DSVShop/LogoDSV.png">
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <span>Telephone: +111-444-989</span>
-        <span>Email: contact@jmaxgear.com</span>
-        <div class="user-options">
-            <a href="#">My Account</a>
-            <a href="#">USD ▼</a>
-            <a href="#">ENG ▼</a>
-        </div>
+    <div class="container">
+        <!-- HEADING -->
+        <div class="heading">Tết Rộn Ràng - Săn Công Nghệ Cực Chất!</div>
+
+        <!-- HEADER -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="./index.html"><img src="../img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html"><i class="ti-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="ti-info-alt"></i> About</a></li>
+                    <li class="has-submenu">
+                        <a href="products.html"><i class="ti-gift"></i> Products</a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="ti-bolt"></i> Flash Sale</a></li>
+                            <li><a href="#"><i class="ti-medall-alt"></i> Best Seller</a></li>
+                            <li><a href="#"><i class="ti-more"></i> More</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html"><i class="ti-help-alt"></i> FAQ</a></li>
+                    <li><a href="contact.html"><i class="ti-email"></i> Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button><i class="ti-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span>Cart</span><span class="cart-count">3</span></a>
+                    <div class="user-menu">
+                        <a href="#" class="user"><i class="ti-user"></i> <span>Account</span></a>
+                        <ul class="user-dropdown">
+                            <li><a href="account.html"><i class="ti-user"></i> Tài khoản</a></li>
+                            <li><a href="#" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- BANNER -->
+        <section class="banner">
+            <img src="./img/DSVShop/banner.dsvshop.png" alt="Banner Tết" class="banner-img">
+            <div class="banner-overlay">
+                <h1>Chào đón Tết - Sắm công nghệ đỉnh cao!</h1>
+                <p>Giảm giá lên đến 50% - Nhanh tay nhận ưu đãi!</p>
+                <button class="banner-btn">Khám phá ngay <i class="ti-arrow-right"></i></button>
+            </div>
+        </section>
+
+        <!-- PROMOTION SECTION -->
+        <section class="promotion">
+            <h2>Ưu đãi đặc biệt</h2>
+            <div class="promo-list">
+                <div class="promo-item">
+                    <img src="./img/product/Laptop.png" alt="Laptop">
+                    <h3>Laptop Dell giảm 20%</h3>
+                    <p>Chỉ từ 15 triệu - Sắm ngay!</p>
+                    <button>Xem chi tiết <i class="ti-arrow-right"></i></button>
+                </div>
+                <div class="promo-item">
+                    <img src="./img/product/DongHo.png" alt="Apple Watch">
+                    <h3>Apple Watch giảm sốc</h3>
+                    <p>Giảm tới 30% - Đừng bỏ lỡ!</p>
+                    <button>Xem chi tiết <i class="ti-arrow-right"></i></button>
+                </div>
+                <div class="promo-item">
+                    <img src="./img/product/Iphone.png" alt="iPhone">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p>Giảm 15% - Hiệu năng đỉnh cao!</p>
+                    <button>Xem chi tiết <i class="ti-arrow-right"></i></button>
+                </div>                <div class="promo-item">
+                    <img src="./img/product/Iphone.png" alt="iPhone">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p>Giảm 15% - Hiệu năng đỉnh cao!</p>
+                    <button>Xem chi tiết <i class="ti-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS SECTION -->
+        <section class="products">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="./img/product/Laptop.png" alt="Laptop Dell">
+                    <h3>Laptop Dell Latitude L3540</h3>
+                    <p>Hiệu suất mạnh mẽ - Mượt mà từng tác vụ.</p>
+                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/product/DongHo.png" alt="Apple Watch">
+                    <h3>Apple Watch Series 10</h3>
+                    <p>Đẳng cấp trên cổ tay – Thời trang & Công nghệ.</p>
+                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/product/Iphone.png" alt="iPhone 15">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p>Hiệu năng đỉnh cao – Chụp ảnh siêu nét.</p>
+                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
+                </div>
+                <div class="product-item">
+                    <img src="./img/product/Iphone.png" alt="iPhone 15">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p>Hiệu năng đỉnh cao – Chụp ảnh siêu nét.</p>
+                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials">
+            <h2>Khách hàng nói gì</h2>
+            <div class="testimonial-list">
+                <div class="testimonial-item">
+                    <p>"Sản phẩm chất lượng, giao hàng nhanh, rất hài lòng!"</p>
+                    <h4>Nguyễn Văn A</h4>
+                    <span class="rating"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i></span>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Giá cả hợp lý, dịch vụ tuyệt vời, sẽ quay lại!"</p>
+                    <h4>Trần Thị B</h4>
+                    <span class="rating"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star-half"></i></span>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Giá cả hợp lý, dịch vụ tuyệt vời, sẽ quay lại!"</p>
+                    <h4>Trần Thị B</h4>
+                    <span class="rating"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star-half"></i></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>DSV Technology</h3>
+                    <p>Hệ sinh thái công nghệ - Mua sắm thông minh, trải nghiệm đỉnh cao!</p>
+                    <p><i class="ti-location-pin"></i> 227 Bến Thành, Quận 1, TP. Hồ Chí Minh</p>
+                    <p><i class="ti-mobile"></i> 0787 544 232</p>
+                    <p><i class="ti-email"></i> support@dsvshop.com</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Chính Sách</h3>
+                    <ul>
+                        <li><a href="#"><i class="ti-lock"></i> Chính sách bảo mật</a></li>
+                        <li><a href="#"><i class="ti-file"></i> Điều khoản sử dụng</a></li>
+                        <li><a href="#"><i class="ti-headphone"></i> Hỗ trợ khách hàng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter"></i></a>
+                        <a href="#"><i class="ti-instagram"></i></a>
+                        <a href="#"><i class="ti-youtube"></i></a>
+                    </div>
+                    <h3>Đăng Ký Nhận Tin</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Nhập email nhận ưu đãi..." required>
+                        <button type="submit"><i class="ti-arrow-right"></i> Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <p class="copyright">© 2025 DSV Technology. All rights reserved.</p>
+        </footer>
     </div>
-
-    <!-- Header -->
-    <header class="main-header">
-        <div class="logo">
-            <img src="logo.png" alt="JMaxGear Logo">
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search everything">
-            <select>
-                <option>All</option>
-            </select>
-            <button>🔍</button>
-        </div>
-        <div class="icons">
-            <a href="#">🏠</a>
-            <a href="#">❤️</a>
-            <a href="#">🛒 <span class="cart-count">4</span> $220.00</a>
-        </div>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <button class="category-btn">☰ ALL CATEGORIES</button>
-        <ul>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Exclusive Deals</a></li>
-            <li><a href="#">Flash Deals</a></li>
-            <li><a href="#">Pages ▼</a></li>
-            <li><a href="#">Super Sale <span class="discount">-15%</span></a></li>
-        </ul>
-    </nav>
-
-    <!-- Slider Section -->
-    <section class="slider">
-        <div class="slides">
-            <div class="slide"><img src="slide1.jpg" alt="Slide 1"></div>
-            <div class="slide"><img src="slide2.jpg" alt="Slide 2"></div>
-            <div class="slide"><img src="slide3.jpg" alt="Slide 3"></div>
-        </div>
-        <button class="prev">❮</button>
-        <button class="next">❯</button>
-    </section>
-
-    <!-- Product Section -->
-    <section class="products">
-        <h2>Featured Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="product1.jpg" alt="Product 1">
-                <h3>Sports Shoes</h3>
-                <p>$50.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="product2.jpg" alt="Product 2">
-                <h3>Training Gloves</h3>
-                <p>$20.00</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="product3.jpg" alt="Product 3">
-                <h3>Compression Shirt</h3>
-                <p>$30.00</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <img src="logo.png" alt="JMG">
-                <p><strong>ADDRESS:</strong> 4247 Ashford Drive, Virginia, USA</p>
-                <p><strong>TELEPHONE:</strong> (+1) 900 901 904</p>
-                <p><strong>EMAIL:</strong> contact@jmaxgear.com</p>
-            </div>
-            <div class="footer-column">
-                <h3>MENU</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>ACCOUNT</h3>
-                <ul>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Checkout</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Register</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>NEWSLETTER</h3>
-                <p>Subscribe to our newsletter for updates and promotions.</p>
-                <input type="email" placeholder="Enter Your Mail">
-                <button>Subscribe</button>
-            </div>
-        </div>
-        <div class="footer-bottom">© 2025 All Rights Reserved By JMaxGear Sport</div>
-    </footer>
 </body>
 </html>
