@@ -7,14 +7,14 @@
 
 .checkout-container {
     display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
     gap: 40px;
 }
 
-.checkout-form, .checkout-summary {
+/* Checkout Form */
+.checkout-form {
     flex: 1;
     background: #fff8e1;
     border: 2px solid #ffcc00;
@@ -24,31 +24,39 @@
     transition: all 0.4s ease;
 }
 
-.checkout-form:hover, .checkout-summary:hover {
+.checkout-form:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.checkout-form h2, .checkout-summary h2 {
+.checkout-form h2 {
     font-size: 2rem;
     color: #d32f2f;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
+.checkout-form p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.checkout-form .form-group {
     margin-bottom: 20px;
 }
 
-.form-group label {
+.checkout-form .form-group label {
     display: block;
     font-size: 1.1rem;
     color: #333;
     margin-bottom: 8px;
 }
 
-.form-group input, .form-group textarea, .form-group select {
+.checkout-form .form-group input,
+.checkout-form .form-group textarea,
+.checkout-form .form-group select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ffcc00;
@@ -56,46 +64,153 @@
     font-size: 1rem;
     outline: none;
     background: #fff;
-    transition: border-color 0.4s ease;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
-.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+.checkout-form .form-group input:focus,
+.checkout-form .form-group textarea:focus,
+.checkout-form .form-group select:focus {
     border-color: #d32f2f;
     box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
 }
 
-.form-group textarea {
-    height: 100px;
+.checkout-form .form-group textarea {
+    height: 120px;
     resize: vertical;
 }
 
-.summary-items {
+/* Success Message */
+.success-message {
+    text-align: center;
+}
+
+.success-message h2 {
+    font-size: 2.5rem;
+    color: #d32f2f;
     margin-bottom: 20px;
+}
+
+.success-message p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.back-home-btn {
+    background: linear-gradient(135deg, #d32f2f, #ff4444);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.back-home-btn:hover {
+    background: linear-gradient(135deg, #ffcc00, #ffd700);
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Checkout Summary */
+.checkout-summary {
+    flex: 1;
+    background: #fff8e1;
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.checkout-summary:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-summary h2 {
+    font-size: 2rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary-items {
+    margin-bottom: 25px;
+    max-height: 300px; /* Giới hạn chiều cao để scroll nếu nhiều sản phẩm */
+    overflow-y: auto; /* Thêm thanh cuộn dọc khi vượt quá */
 }
 
 .summary-item {
     display: flex;
     justify-content: space-between;
-    font-size: 1.1rem;
-    color: #666;
-    padding: 10px 0;
+    align-items: center;
+    padding: 15px 0;
     border-bottom: 1px dashed #ffcc00;
 }
 
+.item-details {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-details img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #ffcc00;
+    transition: transform 0.3s ease;
+}
+
+.item-details:hover img {
+    transform: scale(1.05);
+}
+
+.item-details h4 {
+    font-size: 1.2rem;
+    color: #d32f2f;
+    margin-bottom: 5px;
+}
+
+.item-details p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.item-price {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
 .summary-total {
-    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #ffcc00;
 }
 
 .summary-total p {
     font-size: 1.1rem;
     color: #333;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .summary-total h3 {
     font-size: 1.6rem;
     color: #d32f2f;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .summary-total span {
@@ -134,5 +249,34 @@
 
     .checkout-form, .checkout-summary {
         width: 100%;
+    }
+
+    .checkout-form h2, .checkout-summary h2, .success-message h2 {
+        font-size: 1.8rem;
+    }
+
+    .checkout-form p, .success-message p {
+        font-size: 1rem;
+    }
+
+    .item-details img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-details h4 {
+        font-size: 1.1rem;
+    }
+
+    .item-price {
+        font-size: 1.1rem;
+    }
+
+    .summary-total h3 {
+        font-size: 1.4rem;
+    }
+
+    .summary-items {
+        max-height: 200px; /* Giảm chiều cao trên mobile */
     }
 }

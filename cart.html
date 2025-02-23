@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart | DSV Shop</title>
-    <link rel="stylesheet" href="./style/css/cart.css">
     <link rel="stylesheet" href="./style/css/style.css">
+    <link rel="stylesheet" href="./style/css/cart.css">
     <link rel="stylesheet" href="./style/icon/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="icon" href="./img/DSVShop/LogoDSV.png">
 </head>
@@ -14,17 +14,20 @@
         <!-- HEADING -->
         <div class="heading">Giỏ Hàng Của Bạn</div>
 
-        <!-- HEADER (giữ nguyên từ trang home) -->
+        <!-- HEADER (giữ nguyên từ trang home cải tiến) -->
         <header class="header">
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html"><img src="./img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
                 </div>
+                <div class="nav-toggle">
+                    <i class="ti-menu"></i>
+                </div>
                 <ul class="menu">
                     <li><a href="index.html"><i class="ti-home"></i> Home</a></li>
                     <li><a href="about.html"><i class="ti-info-alt"></i> About</a></li>
                     <li class="has-submenu">
-                        <a href="products.html"><i class="ti-gift"></i> Products</a>
+                        <a href="products.html"><i class="ti-gift"></i> Products <i class="ti-angle-down"></i></a>
                         <ul class="submenu">
                             <li><a href="#"><i class="ti-bolt"></i> Flash Sale</a></li>
                             <li><a href="#"><i class="ti-medall-alt"></i> Best Seller</a></li>
@@ -39,12 +42,12 @@
                         <input type="text" placeholder="Tìm kiếm sản phẩm...">
                         <button><i class="ti-search"></i></button>
                     </div>
-                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span>Cart</span><span class="cart-count">3</span></a>
+                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span class="cart-count">3</span></a>
                     <div class="user-menu">
-                        <a href="#" class="user"><i class="ti-user"></i> <span>Account</span></a>
+                        <a href="#" class="user"><i class="ti-user"></i></a>
                         <ul class="user-dropdown">
-                            <li><a href="login.html"><i class="ti-user"></i> Tài khoản</a></li>
-                            <li><a href="login.html" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
+                            <li><a href="account.html"><i class="ti-user"></i> Tài khoản</a></li>
+                            <li><a href="#" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -53,36 +56,51 @@
 
         <!-- CART SECTION -->
         <section class="cart-section">
-            <h2>Sản phẩm trong giỏ hàng</h2>
-            <div class="cart-list">
-                <div class="cart-item">
-                    <img src="./img/product/Iphone.png" alt="iPhone 15 Pro Max">
-                    <div class="cart-item-info">
-                        <h3>iPhone 15 Pro Max</h3>
-                        <p>Giá: 30,000,000 VNĐ</p>
-                        <div class="cart-quantity">
-                            <label>Số lượng:</label>
-                            <input type="number" value="1" min="1">
+            <div class="cart-container">
+                <h2>Sản Phẩm Trong Giỏ Hàng</h2>
+                <p>Xem lại đơn hàng của bạn trước khi thanh toán.</p>
+                <div class="cart-list">
+                    <div class="cart-item">
+                        <img src="./img/product/iphone/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg" alt="iPhone 15 Pro Max">
+                        <div class="cart-item-info">
+                            <h3>iPhone 15 Pro Max (256GB, Black Titanium)</h3>
+                            <p class="price">30,000,000 VNĐ</p>
+                            <div class="cart-quantity">
+                                <label>Số lượng:</label>
+                                <input type="number" value="1" min="1" onchange="updateTotal()">
+                            </div>
+                            <button class="remove-btn"><i class="ti-trash"></i> Xóa</button>
                         </div>
-                        <button class="remove-btn"><i class="ti-trash"></i> Xóa</button>
+                    </div>
+                    <div class="cart-item">
+                        <img src="./img/product/Laptop.png" alt="Laptop Dell">
+                        <div class="cart-item-info">
+                            <h3>Laptop Dell Latitude L3540</h3>
+                            <p class="price">15,000,000 VNĐ</p>
+                            <div class="cart-quantity">
+                                <label>Số lượng:</label>
+                                <input type="number" value="2" min="1" onchange="updateTotal()">
+                            </div>
+                            <button class="remove-btn"><i class="ti-trash"></i> Xóa</button>
+                        </div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="./img/product/DongHo.png" alt="Apple Watch">
+                        <div class="cart-item-info">
+                            <h3>Apple Watch Series 10 (GPS, 42mm)</h3>
+                            <p class="price">10,000,000 VNĐ</p>
+                            <div class="cart-quantity">
+                                <label>Số lượng:</label>
+                                <input type="number" value="1" min="1" onchange="updateTotal()">
+                            </div>
+                            <button class="remove-btn"><i class="ti-trash"></i> Xóa</button>
+                        </div>
                     </div>
                 </div>
-                <div class="cart-item">
-                    <img src="./img/product/Laptop.png" alt="Laptop Dell">
-                    <div class="cart-item-info">
-                        <h3>Laptop Dell Latitude L3540</h3>
-                        <p>Giá: 15,000,000 VNĐ</p>
-                        <div class="cart-quantity">
-                            <label>Số lượng:</label>
-                            <input type="number" value="2" min="1">
-                        </div>
-                        <button class="remove-btn"><i class="ti-trash"></i> Xóa</button>
-                    </div>
+                <div class="cart-total">
+                    <h3>Tổng tiền: <span id="cartTotal">70,000,000 VNĐ</span></h3>
+                    <a href="checkout.html" class="checkout-btn">Thanh toán <i class="ti-arrow-right"></i></a>
                 </div>
-            </div>
-            <div class="cart-total">
-                <h3>Tổng tiền: <span>45,000,000 VNĐ</span></h3>
-                <button class="checkout-btn">Thanh toán <i class="ti-arrow-right"></i></button>
             </div>
         </section>
 
@@ -122,5 +140,38 @@
             <p class="copyright">© 2025 DSV Technology. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- JavaScript cho toggle menu và tính tổng tiền -->
+    <script>
+        // Toggle menu trên mobile
+        const navToggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.menu');
+        navToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Tính tổng tiền
+        function updateTotal() {
+            const items = document.querySelectorAll('.cart-item');
+            let total = 0;
+            items.forEach(item => {
+                const priceText = item.querySelector('.price').textContent.replace(/[^0-9]/g, '');
+                const quantity = parseInt(item.querySelector('.cart-quantity input').value);
+                total += parseInt(priceText) * quantity;
+            });
+            document.getElementById('cartTotal').textContent = total.toLocaleString('vi-VN') + ' VNĐ';
+        }
+
+        // Xóa sản phẩm
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                button.closest('.cart-item').remove();
+                updateTotal();
+            });
+        });
+
+        // Cập nhật tổng tiền ban đầu
+        updateTotal();
+    </script>
 </body>
 </html>
