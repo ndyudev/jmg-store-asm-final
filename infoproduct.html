@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iPhone 15 Pro Max | DSV Shop</title>
-    <link rel="stylesheet" href="./style/css/style.css">
     <link rel="stylesheet" href="./style/css/infoproduct.css">
+    <link rel="stylesheet" href="./style/css/style.css">
     <link rel="stylesheet" href="./style/icon/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="icon" href="./img/DSVShop/LogoDSV.png">
 </head>
@@ -46,8 +46,8 @@
                     <div class="user-menu">
                         <a href="#" class="user"><i class="ti-user"></i></a>
                         <ul class="user-dropdown">
-                            <li><a href="login.htmll"><i class="ti-user"></i> Tài khoản</a></li>
-                            <li><a href="login.html" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
+                            <li><a href="account.html"><i class="ti-user"></i> Tài khoản</a></li>
+                            <li><a href="#" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,23 +59,69 @@
             <div class="product-detail-container">
                 <!-- Product Images -->
                 <div class="product-images">
-                    <div class="main-image">
-                        <img src="./img/product/Iphone.png" alt="iPhone 15 Pro Max Main" id="mainImage">
+                    <div class="main-image-container">
+                        <img src="./img/product/iphone/iphone-16-pro-max-titan-sa-mac-1-638638962337813406-750x500.jpg" alt="iPhone 15 Pro Max Main" id="mainImage">
                     </div>
                     <div class="thumbnail-gallery">
-                        <img src="./img/product/Iphone.png" alt="Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
-                        <img src="./img/product/Iphone-2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
-                        <img src="./img/product/Iphone-3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
-                        <img src="./img/product/Iphone-4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(this)">
+                        <div class="thumbnail-wrapper">
+                            <img src="./img/product/iphone/iphone-16-pro-max-titan-sa-mac-2-638638962343879149-750x500.jpg" alt="Thumbnail 1" class="thumbnail active" onclick="changeImage(this)">
+                        </div>
+                        <div class="thumbnail-wrapper">
+                            <img src="./img/product/iphone/iphone-16-pro-max-titan-sa-mac-3-638638962351331027-750x500.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(this)">
+                        </div>
+                        <div class="thumbnail-wrapper">
+                            <img src="./img/product/iphone/iphone-16-pro-max-titan-sa-mac-4-638638962357240755-750x500.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(this)">
+                        </div>
+                        <div class="thumbnail-wrapper">
+                            <img src="./img/product/iphone/iphone-16-pro-max-titan-sa-mac-5-638638962363556047-750x500.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(this)">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Product Info -->
                 <div class="product-info">
                     <h1>iPhone 15 Pro Max</h1>
-                    <p class="price">30,000,000 VNĐ</p>
+                    <p class="price">Từ 30,000,000 VNĐ</p>
                     <p class="description">iPhone 15 Pro Max – đỉnh cao công nghệ từ Apple với thiết kế titan sang trọng, hiệu năng vượt trội từ chip A17 Bionic, và hệ thống camera 48MP cho ảnh chụp sắc nét trong mọi điều kiện ánh sáng.</p>
                     
+                    <!-- Variant Selection -->
+                    <div class="product-variants">
+                        <h3>Chọn phiên bản:</h3>
+                        <div class="variant-options">
+                            <label class="variant-option">
+                                <input type="radio" name="variant" value="256GB" checked onchange="updatePrice()">
+                                <span>256GB - 30,000,000 VNĐ</span>
+                            </label>
+                            <label class="variant-option">
+                                <input type="radio" name="variant" value="512GB" onchange="updatePrice()">
+                                <span>512GB - 35,000,000 VNĐ</span>
+                            </label>
+                            <label class="variant-option">
+                                <input type="radio" name="variant" value="1TB" onchange="updatePrice()">
+                                <span>1TB - 40,000,000 VNĐ</span>
+                            </label>
+                        </div>
+                        <h3>Chọn màu sắc:</h3>
+                        <div class="color-options">
+                            <label class="color-option">
+                                <input type="radio" name="color" value="Black Titanium" checked>
+                                <span class="color-circle" style="background: #1c2526;"></span> Black Titanium
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="White Titanium">
+                                <span class="color-circle" style="background: #f5f5f5;"></span> White Titanium
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="Blue Titanium">
+                                <span class="color-circle" style="background: #1e3a5f;"></span> Blue Titanium
+                            </label>
+                            <label class="color-option">
+                                <input type="radio" name="color" value="Natural Titanium">
+                                <span class="color-circle" style="background: #b0a69d;"></span> Natural Titanium
+                            </label>
+                        </div>
+                    </div>
+
                     <!-- Specs -->
                     <div class="product-specs">
                         <h3>Thông số kỹ thuật</h3>
@@ -84,7 +130,6 @@
                             <li><strong>Chip:</strong> A17 Bionic, 6-core CPU, 6-core GPU</li>
                             <li><strong>Camera:</strong> Chính 48MP, Ultra-wide 12MP, Telephoto 12MP (5x zoom)</li>
                             <li><strong>Pin:</strong> Lên đến 29 giờ xem video, sạc nhanh 20W</li>
-                            <li><strong>Bộ nhớ:</strong> 256GB / 512GB / 1TB</li>
                             <li><strong>Hệ điều hành:</strong> iOS 17</li>
                             <li><strong>Chất liệu:</strong> Khung titan, mặt kính Ceramic Shield</li>
                         </ul>
@@ -95,6 +140,7 @@
                         <label for="quantity">Số lượng:</label>
                         <input type="number" id="quantity" value="1" min="1" class="quantity">
                         <button class="add-to-cart-btn">Thêm vào giỏ <i class="ti-shopping-cart"></i></button>
+                        <a href="checkout.html" class="buy-now-btn">Mua ngay <i class="ti-arrow-right"></i></a>
                     </div>
 
                     <!-- Additional Info -->
@@ -102,6 +148,49 @@
                         <p><i class="ti-truck"></i> Giao hàng miễn phí toàn quốc</p>
                         <p><i class="ti-shield"></i> Bảo hành chính hãng 12 tháng</p>
                         <p><i class="ti-reload"></i> Đổi trả dễ dàng trong 7 ngày</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments and Reviews Section -->
+            <div class="reviews-section">
+                <h2>Đánh Giá & Bình Luận</h2>
+                <div class="review-form">
+                    <h3>Để lại đánh giá của bạn</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="rating">Đánh giá (1-5 sao):</label>
+                            <div class="star-rating">
+                                <input type="radio" id="star5" name="rating" value="5" required><label for="star5"><i class="ti-star"></i></label>
+                                <input type="radio" id="star4" name="rating" value="4"><label for="star4"><i class="ti-star"></i></label>
+                                <input type="radio" id="star3" name="rating" value="3"><label for="star3"><i class="ti-star"></i></label>
+                                <input type="radio" id="star2" name="rating" value="2"><label for="star2"><i class="ti-star"></i></label>
+                                <input type="radio" id="star1" name="rating" value="1"><label for="star1"><i class="ti-star"></i></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Bình luận:</label>
+                            <textarea id="comment" placeholder="Viết bình luận của bạn..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-review-btn">Gửi đánh giá <i class="ti-arrow-right"></i></button>
+                    </form>
+                </div>
+                <div class="review-list">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <h4>Nguyễn Văn A</h4>
+                            <span class="review-rating"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i></span>
+                        </div>
+                        <p>"Sản phẩm tuyệt vời, camera chụp ảnh siêu nét, pin dùng cả ngày vẫn ổn!"</p>
+                        <span class="review-date">20/02/2025</span>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <h4>Trần Thị B</h4>
+                            <span class="review-rating"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star-half"></i></span>
+                        </div>
+                        <p>"Thiết kế đẹp, hiệu năng mạnh, nhưng giá hơi cao so với túi tiền."</p>
+                        <span class="review-date">18/02/2025</span>
                     </div>
                 </div>
             </div>
@@ -144,7 +233,7 @@
         </footer>
     </div>
 
-    <!-- JavaScript cho gallery ảnh và toggle menu -->
+    <!-- JavaScript cho gallery ảnh, cập nhật giá, và toggle menu -->
     <script>
         // Toggle menu trên mobile
         const navToggle = document.querySelector('.nav-toggle');
@@ -159,6 +248,17 @@
             mainImage.src = thumbnail.src;
             document.querySelectorAll('.thumbnail').forEach(img => img.classList.remove('active'));
             thumbnail.classList.add('active');
+        }
+
+        // Cập nhật giá khi chọn phiên bản
+        function updatePrice() {
+            const variants = {
+                '256GB': '30,000,000 VNĐ',
+                '512GB': '35,000,000 VNĐ',
+                '1TB': '40,000,000 VNĐ'
+            };
+            const selectedVariant = document.querySelector('input[name="variant"]:checked').value;
+            document.querySelector('.price').textContent = variants[selectedVariant];
         }
     </script>
 </body>
