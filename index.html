@@ -13,17 +13,20 @@
         <!-- HEADING -->
         <div class="heading">Tết Rộn Ràng - Săn Công Nghệ Cực Chất!</div>
 
-        <!-- HEADER -->
+        <!-- HEADER với Navigation cải tiến -->
         <header class="header">
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html"><img src="./img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
                 </div>
+                <div class="nav-toggle">
+                    <i class="ti-menu"></i>
+                </div>
                 <ul class="menu">
                     <li><a href="index.html"><i class="ti-home"></i> Home</a></li>
                     <li><a href="about.html"><i class="ti-info-alt"></i> About</a></li>
                     <li class="has-submenu">
-                        <a href="products.html"><i class="ti-gift"></i> Products</a>
+                        <a href="products.html"><i class="ti-gift"></i> Products <i class="ti-angle-down"></i></a>
                         <ul class="submenu">
                             <li><a href="#"><i class="ti-bolt"></i> Flash Sale</a></li>
                             <li><a href="#"><i class="ti-medall-alt"></i> Best Seller</a></li>
@@ -38,12 +41,12 @@
                         <input type="text" placeholder="Tìm kiếm sản phẩm...">
                         <button><i class="ti-search"></i></button>
                     </div>
-                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span>Cart</span><span class="cart-count">3</span></a>
+                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span class="cart-count">3</span></a>
                     <div class="user-menu">
-                        <a href="#" class="user"><i class="ti-user"></i> <span>Account</span></a>
+                        <a href="#" class="user"><i class="ti-user"></i></a>
                         <ul class="user-dropdown">
-                            <li><a href="account.html"><i class="ti-user"></i> Tài khoản</a></li>
-                            <li><a href="#" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
+                            <li><a href="login.html"><i class="ti-user"></i> Tài khoản</a></li>
+                            <li><a href="login.html" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -81,11 +84,6 @@
                     <h3>iPhone 15 Pro Max</h3>
                     <p>Giảm 15% - Hiệu năng đỉnh cao!</p>
                     <button>Xem chi tiết <i class="ti-arrow-right"></i></button>
-                </div>                <div class="promo-item">
-                    <img src="./img/product/Iphone.png" alt="iPhone">
-                    <h3>iPhone 15 Pro Max</h3>
-                    <p>Giảm 15% - Hiệu năng đỉnh cao!</p>
-                    <button>Xem chi tiết <i class="ti-arrow-right"></i></button>
                 </div>
             </div>
         </section>
@@ -112,12 +110,6 @@
                     <p>Hiệu năng đỉnh cao – Chụp ảnh siêu nét.</p>
                     <button>Mua ngay <i class="ti-shopping-cart"></i></button>
                 </div>
-                <div class="product-item">
-                    <img src="./img/product/Iphone.png" alt="iPhone 15">
-                    <h3>iPhone 15 Pro Max</h3>
-                    <p>Hiệu năng đỉnh cao – Chụp ảnh siêu nét.</p>
-                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
-                </div>
             </div>
         </section>
 
@@ -129,11 +121,6 @@
                     <p>"Sản phẩm chất lượng, giao hàng nhanh, rất hài lòng!"</p>
                     <h4>Nguyễn Văn A</h4>
                     <span class="rating"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i></span>
-                </div>
-                <div class="testimonial-item">
-                    <p>"Giá cả hợp lý, dịch vụ tuyệt vời, sẽ quay lại!"</p>
-                    <h4>Trần Thị B</h4>
-                    <span class="rating"><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star"></i><i class="ti-star-half"></i></span>
                 </div>
                 <div class="testimonial-item">
                     <p>"Giá cả hợp lý, dịch vụ tuyệt vời, sẽ quay lại!"</p>
@@ -179,5 +166,15 @@
             <p class="copyright">© 2025 DSV Technology. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- JavaScript cho toggle menu trên mobile -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.menu');
+
+        navToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

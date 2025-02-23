@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart | DSV Shop</title>
-    <link rel="stylesheet" href="./style/css/cart.css">
+    <title>Checkout | DSV Shop</title>
     <link rel="stylesheet" href="./style/css/style.css">
+    <link rel="stylesheet" href="./style/css/checkout.css">
     <link rel="stylesheet" href="./style/icon/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="icon" href="./img/DSVShop/LogoDSV.png">
 </head>
 <body>
     <div class="container">
         <!-- HEADING -->
-        <div class="heading">Giỏ Hàng Của Bạn</div>
+        <div class="heading">Thanh Toán Đơn Hàng</div>
 
         <!-- HEADER (giữ nguyên từ trang home) -->
         <header class="header">
@@ -51,38 +51,57 @@
             </nav>
         </header>
 
-        <!-- CART SECTION -->
-        <section class="cart-section">
-            <h2>Sản phẩm trong giỏ hàng</h2>
-            <div class="cart-list">
-                <div class="cart-item">
-                    <img src="./img/product/Iphone.png" alt="iPhone 15 Pro Max">
-                    <div class="cart-item-info">
-                        <h3>iPhone 15 Pro Max</h3>
-                        <p>Giá: 30,000,000 VNĐ</p>
-                        <div class="cart-quantity">
-                            <label>Số lượng:</label>
-                            <input type="number" value="1" min="1">
+        <!-- CHECKOUT SECTION -->
+        <section class="checkout-section">
+            <div class="checkout-container">
+                <div class="checkout-form">
+                    <h2>Thông tin thanh toán</h2>
+                    <form>
+                        <div class="form-group">
+                            <label>Họ và tên:</label>
+                            <input type="text" placeholder="Nhập họ và tên" required>
                         </div>
-                        <button class="remove-btn"><i class="ti-trash"></i> Xóa</button>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <img src="./img/product/Laptop.png" alt="Laptop Dell">
-                    <div class="cart-item-info">
-                        <h3>Laptop Dell Latitude L3540</h3>
-                        <p>Giá: 15,000,000 VNĐ</p>
-                        <div class="cart-quantity">
-                            <label>Số lượng:</label>
-                            <input type="number" value="2" min="1">
+                        <div class="form-group">
+                            <label>Số điện thoại:</label>
+                            <input type="tel" placeholder="Nhập số điện thoại" required>
                         </div>
-                        <button class="remove-btn"><i class="ti-trash"></i> Xóa</button>
-                    </div>
+                        <div class="form-group">
+                            <label>Địa chỉ giao hàng:</label>
+                            <textarea placeholder="Nhập địa chỉ giao hàng" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Phương thức thanh toán:</label>
+                            <select required>
+                                <option value="">Chọn phương thức</option>
+                                <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                                <option value="bank">Chuyển khoản ngân hàng</option>
+                                <option value="momo">Ví MoMo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Ghi chú (nếu có):</label>
+                            <textarea placeholder="Ghi chú cho đơn hàng"></textarea>
+                        </div>
+                    </form>
                 </div>
-            </div>
-            <div class="cart-total">
-                <h3>Tổng tiền: <span>45,000,000 VNĐ</span></h3>
-                <button class="checkout-btn">Thanh toán <i class="ti-arrow-right"></i></button>
+                <div class="checkout-summary">
+                    <h2>Tóm tắt đơn hàng</h2>
+                    <div class="summary-items">
+                        <div class="summary-item">
+                            <span>iPhone 15 Pro Max (x1)</span>
+                            <span>30,000,000 VNĐ</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Laptop Dell Latitude L3540 (x2)</span>
+                            <span>30,000,000 VNĐ</span>
+                        </div>
+                    </div>
+                    <div class="summary-total">
+                        <p>Phí vận chuyển: <span>Miễn phí</span></p>
+                        <h3>Tổng cộng: <span>60,000,000 VNĐ</span></h3>
+                    </div>
+                    <button class="place-order-btn">Đặt hàng <i class="ti-check"></i></button>
+                </div>
             </div>
         </section>
 

@@ -1,767 +1,171 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #fcefe2; /* Tông màu sáng ấm áp */
-}
-
-/* Header */
-.header {
-    background-color: #d32f2f; /* Màu đỏ chủ đạo */
-    color: #fff;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.menu li a:hover {
-    background-color: #ffcc00; /* Màu vàng Tết */
-    color: #d32f2f;
-}
-
-/* Submenu */
-.has-submenu .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #d32f2f;
-    list-style: none;
-    padding: 10px 0;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.has-submenu:hover .submenu {
-    display: block;
-}
-
-.submenu li a {
-    padding: 10px 20px;
-    color: #fff;
-    white-space: nowrap;
-}
-
-.submenu li a:hover {
-    background-color: #ffcc00;
-    color: #d32f2f;
-}
-
-/* Slider */
-.slider {
-    max-width: 100%;
-    overflow: hidden;
-    text-align: center;
-    background-color: #ffd54f; /* Màu vàng đậm */
-}
-
-.banner-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* About Section */
-.about {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #fff8e1; /* Nền vàng nhạt */
-}
-
-.about h1 {
-    color: #d32f2f;
-    font-size: 2.5em;
-}
-
-.about p {
-    margin: 10px 0;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-.about .cta {
-    background-color: #d32f2f;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 20px;
-    border-radius: 5px;
-}
-
-.about .cta:hover {
-    background-color: #ffcc00;
-    color: #d32f2f;
-}
-/* FAQ */
-.faq {
-    padding: 40px 20px;
-}
-
-.accordion {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.accordion-item {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.accordion-button {
-    background-color: #f5f5f5;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.accordion-button:hover {
-    background-color: #e0e0e0;
-}
-
-.accordion-icon {
-    margin-right: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.accordion-panel {
-    padding: 15px;
-}
-
-.accordion-item.active .accordion-button {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.accordion-item.active .accordion-icon {
-    transform: rotate(180deg);
-}
-
-/* Footer */
-.footer {
-    background-color: #d32f2f;
-    color: #fff;
-    text-align: center;
-    padding: 20px 10px;
-    margin-top: 40px;
-}
-
-.footer .subnav {
-    margin-bottom: 10px;
-}
-
-.footer .subnav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer .subnav ul li a {
-    text-decoration: none;
-    color: #ffcc00;
-    font-size: 1em;
-}
-
-.footer .subnav ul li a:hover {
-    text-decoration: underline;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* .container {
-    
-} */
-
-/* Products Section */
-.products {
-    padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.products h2 {
-    color: #d32f2f;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.product-item {
-    border: 2px solid #ffcc00;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #fff8e1;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.product-item img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.product-item h3 {
-    color: #d32f2f;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.products button {
-    margin-top: 20px;
-}
-
-
-/* Submenu */
-.submenu {
-    display: none;
-    position: absolute;
-    background: white;
-    list-style: none;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    min-width: 150px;
-    z-index: 100;
-}
-
-.submenu li {
-    padding: 10px;
-}
-
-.submenu a {
-    color: black;
-    display: flex;
-}
-
-.has-submenu:hover .submenu {
-    display: block;
-}
-
-/* Search Box */
-.search-box {
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.search-box input {
-    border: none;
-    outline: none;
-    padding: 5px;
-}
-
-.search-box button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Icons */
-.nav-icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.nav-icons a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-/* Cart */
-.cart {
-    position: relative;
-    font-size: 22px;
-    color: white;
-    margin: 0 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.cart:hover {
-    transform: scale(1.1);
-    color: #ffcc00;
-}
-
-.cart::after {
-    content: "3";
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background: #ffcc00;
-    color: #d32f2f;
-    font-size: 12px;
-    font-weight: bold;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* User Menu */
-.user-menu {
-    position: relative;
-    display: inline-block;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    color: white;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 6px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.user:hover {
-    transform: scale(1.05);
-}
-
-.user-dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
-    width: 180px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-}
-
-.user-dropdown.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #fcefe2;
-}
-
-/* Header */
-.header {
-    background: #222;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 3px solid #d32f2f;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background: #fff;
     width: 100%;
-    max-width: 1200px;
 }
 
-.logo img {
-    height: 50px;
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+.faq-container h2 {
+    font-size: 2.5rem;
+    color: #d32f2f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.menu li {
-    position: relative;
+.faq-container p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
 }
 
-.menu a {
+.faq-container p a {
+    color: #d32f2f;
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.4s ease;
+}
+
+.faq-container p a:hover {
+    color: #ffcc00;
+}
+
+.faq-list {
+    background: #fff8e1;
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.faq-list:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #ffcc00;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.faq-question {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    padding: 10px 15px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    border-radius: 5px;
-}
-
-.menu a:hover {
-    background: #d32f2f;
-    transform: scale(1.05);
-    color:#ffcc00;
-}
-
-/* Submenu */
-.has-submenu .submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    list-style: none;
-    padding: 10px 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    min-width: 160px;
-    z-index: 100;
-}
-
-.has-submenu:hover .submenu {
-    display: block;
-}
-
-.submenu li {
-    padding: 10px;
-}
-
-.submenu a {
-    color: black;
-    display: flex;
+    padding: 20px 0;
+    cursor: pointer;
     transition: background 0.3s ease;
 }
 
-.submenu li a:hover {
-    background-color: #ffcc00;
-    color: #d32f2f;
-}
-
-/* Slider */
-.slider {
-    max-width: 100%;
-    overflow: hidden;
-    text-align: center;
-    background-color: #ffd54f;
-}
-
-.banner-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Product List */
-.product-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 40px;
-}
-
-.product-item {
-    border: 2px solid #ffcc00;
+.faq-question:hover {
+    background: #fff;
     border-radius: 10px;
-    padding: 20px;
-    background-color: #fff8e1;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.product-item button {
-    background-color: #d32f2f;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.product-item button:hover {
-    background-color: #ffcc00;
+.faq-question h3 {
+    font-size: 1.5rem;
     color: #d32f2f;
-    transform: scale(1.05);
-}
-
-.footer {
-    background: #d32f2f;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    border-top: 5px solid #ffcc00;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 20px;
-    text-align: left;
-}
-
-/* Căn chỉnh cột */
-.footer-about,
-.footer-links,
-.footer-social {
-    flex: 1;
-    min-width: 300px;
-    margin-bottom: 20px;
-}
-
-/* Tiêu đề */
-.footer-about h3,
-.footer-links h3,
-.footer-social h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #ffcc00;
-}
-
-/* Text chung */
-.footer p,
-.footer a {
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    margin-bottom: 8px;
-    display: block;
-}
-
-/* Danh sách liên kết */
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin-left: 40px;
-}
-
-.footer-links h3 {
-    margin-left: 40px;
-}
-
-.footer-links li {
-    margin-bottom: 8px;
-}
-
-/* Hiệu ứng hover */
-.footer a:hover {
-    color: #ffcc00;
-}
-
-/* Mạng xã hội */
-.social-icons {
-    display: flex;
-    gap: 20px;
-    padding-top: 10px;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 22px;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.social-icons a:hover {
-    color: #ffcc00;
-    transform: scale(1.1);
-}
-
-/* Form đăng ký */
-.newsletter-form {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.newsletter-form input {
-    flex: 1;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-}
-
-.newsletter-form button {
-    background: #ffcc00;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.newsletter-form button:hover {
-    background: #e6b800;
-}
-
-/* Dòng bản quyền */
-.copyright {
-    margin-top: 20px;
-    font-size: 14px;
-    opacity: 0.8;
-    text-align: center;
-}
-
-
-.footer a:hover {
-    color: #ffcc00;
-}
-
-/* Căn chỉnh icon mạng xã hội */
-.social-icons {
-    display: flex;
-    justify-content: start;
-    gap: 20px;
-    padding-top: 10px;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 22px;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.social-icons a:hover {
-    color: #ffcc00;
-    transform: scale(1.1);
-}
-
-/* Chỉnh lại dòng bản quyền */
-.copyright {
-    margin-top: 20px;
-    font-size: 14px;
-    opacity: 0.8;
-    text-align: center;
-}
-
-/* Định dạng User menu */
-.user-menu {
-    position: relative;
-    display: inline-block;
-}
-
-/* Định dạng text User */
-.user {
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: inline-flex;
     align-items: center;
-    transition: 0.3s;
+    gap: 10px;
+    margin: 0;
 }
 
-/* Hover vào chữ Chau Nhat Duy đổi màu */
-.user:hover {
+.faq-question i {
+    font-size: 1.3rem;
+    color: #d32f2f;
+    transition: transform 0.3s ease;
+}
+
+.faq-question:hover i.ti-angle-down {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 10px;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    font-size: 1.1rem;
+    color: #666;
+    padding: 20px 0;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.faq-answer ul {
+    list-style: none;
+    padding: 0 0 20px 20px;
+}
+
+.faq-answer ul li {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.faq-answer ul li:before {
+    content: '\2022'; /* Dấu chấm tròn */
+    color: #d32f2f;
+    font-size: 1.2rem;
+    position: absolute;
+    left: -20px;
+}
+
+.faq-answer a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.4s ease;
+}
+
+.faq-answer a:hover {
     color: #ffcc00;
 }
 
-/* Dropdown menu ẩn ban đầu */
-.user-dropdown {
-    position: absolute;
-    top: 35px;
-    right: 0;
-    background: white;
-    width: 150px;
-    border-radius: 5px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    display: none;
-    flex-direction: column;
-    z-index: 100;
-}
+/* Responsive cho FAQ */
+@media (max-width: 768px) {
+    .faq-container h2 {
+        font-size: 2rem;
+    }
 
-/* Hiển thị khi hover vào user */
-.user-menu:hover .user-dropdown {
-    display: flex;
-}
+    .faq-container p {
+        font-size: 1rem;
+    }
 
-/* Từng mục trong dropdown */
-.user-dropdown li {
-    list-style: none;
-    border-bottom: 1px solid #ddd;
-}
+    .faq-question h3 {
+        font-size: 1.3rem;
+    }
 
-.user-dropdown li:last-child {
-    border-bottom: none;
-}
+    .faq-question i {
+        font-size: 1.2rem;
+    }
 
-/* Link trong dropdown */
-.user-dropdown li a {
-    display: block;
-    padding: 10px;
-    font-size: 14px;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    transition: 0.3s;
-}
+    .faq-answer p, .faq-answer ul li {
+        font-size: 1rem;
+    }
 
-/* Hover vào từng mục */
-.user-dropdown li a:hover {
-    background: #ffcc00;
-    color: black;
-}
-
-.heading {
-    text-align: center;
-    background-color: #ddd;
+    .faq-list {
+        padding: 20px;
+    }
 }

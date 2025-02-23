@@ -3,9 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact | DSV Shop</title>
+    <link rel="stylesheet" href="./style/css/style.css">
+    <link rel="stylesheet" href="./style/css/contact.css">
+    <link rel="stylesheet" href="./style/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="icon" href="./img/DSVShop/LogoDSV.png">
 </head>
 <body>
-    
+    <div class="container">
+        <!-- HEADING -->
+        <div class="heading">Liên Hệ Với DSV Shop</div>
+
+        <!-- HEADER (giữ nguyên từ trang home cải tiến) -->
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="./img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="ti-menu"></i>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html"><i class="ti-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="ti-info-alt"></i> About</a></li>
+                    <li class="has-submenu">
+                        <a href="products.html"><i class="ti-gift"></i> Products <i class="ti-angle-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#"><i class="ti-bolt"></i> Flash Sale</a></li>
+                            <li><a href="#"><i class="ti-medall-alt"></i> Best Seller</a></li>
+                            <li><a href="#"><i class="ti-more"></i> More</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html"><i class="ti-help-alt"></i> FAQ</a></li>
+                    <li><a href="contact.html"><i class="ti-email"></i> Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                        <button><i class="ti-search"></i></button>
+                    </div>
+                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span class="cart-count">3</span></a>
+                    <div class="user-menu">
+                        <a href="#" class="user"><i class="ti-user"></i></a>
+                        <ul class="user-dropdown">
+                            <li><a href="login.html"><i class="ti-user"></i> Tài khoản</a></li>
+                            <li><a href="login.html" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Thông Tin Liên Hệ</h2>
+                    <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7 qua nhiều kênh khác nhau. Đừng ngần ngại liên hệ để được giải đáp mọi thắc mắc!</p>
+                    <ul>
+                        <li><i class="ti-location-pin"></i> <strong>Địa chỉ:</strong> 227 Bến Thành, Quận 1, TP. Hồ Chí Minh</li>
+                        <li><i class="ti-mobile"></i> <strong>Hotline:</strong> <a href="tel:0787544232">0787 544 232</a></li>
+                        <li><i class="ti-email"></i> <strong>Email:</strong> <a href="mailto:support@dsvshop.com">support@dsvshop.com</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <h3>Theo dõi chúng tôi</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter"></i></a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Gửi Tin Nhắn Cho Chúng Tôi</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Họ và tên:</label>
+                            <input type="text" id="name" placeholder="Nhập họ và tên" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="Nhập email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="tel" id="phone" placeholder="Nhập số điện thoại" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tin nhắn:</label>
+                            <textarea id="message" placeholder="Nhập tin nhắn của bạn" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Gửi ngay <i class="ti-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <!-- Map Section -->
+            <div class="contact-map">
+                <h2>Tìm Chúng Tôi Trên Bản Đồ</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.669883708589!2d106.69830821474894!3d10.759917092332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1b7c3ed289%3A0xa06651894598e9b!2sBen%20Thanh%20Market!5e0!3m2!1sen!2s!4v1698765432105!5m2!1sen!2s" width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- FOOTER (giữ nguyên từ trang home) -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h3>DSV Technology</h3>
+                    <p>Hệ sinh thái công nghệ - Mua sắm thông minh, trải nghiệm đỉnh cao!</p>
+                    <p><i class="ti-location-pin"></i> 227 Bến Thành, Quận 1, TP. Hồ Chí Minh</p>
+                    <p><i class="ti-mobile"></i> 0787 544 232</p>
+                    <p><i class="ti-email"></i> support@dsvshop.com</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Chính Sách</h3>
+                    <ul>
+                        <li><a href="#"><i class="ti-lock"></i> Chính sách bảo mật</a></li>
+                        <li><a href="#"><i class="ti-file"></i> Điều khoản sử dụng</a></li>
+                        <li><a href="#"><i class="ti-headphone"></i> Hỗ trợ khách hàng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter"></i></a>
+                        <a href="#"><i class="ti-instagram"></i></a>
+                        <a href="#"><i class="ti-youtube"></i></a>
+                    </div>
+                    <h3>Đăng Ký Nhận Tin</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Nhập email nhận ưu đãi..." required>
+                        <button type="submit"><i class="ti-arrow-right"></i> Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+            <p class="copyright">© 2025 DSV Technology. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript cho toggle menu trên mobile -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.menu');
+        navToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
