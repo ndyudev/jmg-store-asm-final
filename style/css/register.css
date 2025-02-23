@@ -1,0 +1,243 @@
+/* Register Section */
+.register-section {
+    padding: 80px 0;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 300px); /* Đảm bảo form ở giữa */
+}
+
+.register-container {
+    background: #fff8e1;
+    border: 2px solid #ffcc00;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.register-container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.register-container h2 {
+    font-size: 2rem;
+    color: #d32f2f;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.register-container p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.register-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.register-form .form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.register-form .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.register-form .form-group input:focus {
+    border-color: #d32f2f;
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5);
+}
+
+.form-options {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #666;
+}
+
+.terms input {
+    margin-right: 8px;
+}
+
+.terms a {
+    color: #d32f2f;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.terms a:hover {
+    color: #ffcc00;
+}
+
+.register-btn {
+    background: linear-gradient(135deg, #d32f2f, #ff4444);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #ffcc00, #ffd700);
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.social-register {
+    margin: 20px 0;
+}
+
+.social-register p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+}
+
+.social-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn.google {
+    background: #4285f4;
+    color: #fff;
+}
+
+.social-btn.google:hover {
+    background: #357abd;
+}
+
+.social-btn.facebook {
+    background: #3b5998;
+    color: #fff;
+}
+
+.social-btn.facebook:hover {
+    background: #2d4373;
+}
+
+.social-btn.twitter {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.social-btn.twitter:hover {
+    background: #1a91da;
+}
+
+.social-btn.github {
+    background: #333;
+    color: #fff;
+}
+
+.social-btn.github:hover {
+    background: #24292e;
+}
+
+.login-link {
+    font-size: 1rem;
+    color: #666;
+}
+
+.login-link a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.4s ease;
+}
+
+.login-link a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive cho Register */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 30px;
+        margin: 0 20px;
+    }
+
+    .register-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .register-container p {
+        font-size: 1rem;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        width: 100%;
+    }
+}

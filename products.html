@@ -5,25 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | DSV Shop</title>
     <link rel="stylesheet" href="./style/css/style.css">
+    <link rel="stylesheet" href="./style/css/products.css">
     <link rel="stylesheet" href="./style/icon/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="icon" href="./img/DSVShop/LogoDSV.png">
 </head>
 <body>
     <div class="container">
         <!-- HEADING -->
-        <div class="heading">Tết Rộn Ràng - Săn Công Nghệ Cực Chất!</div>
+        <div class="heading">Khám Phá Sản Phẩm Công Nghệ</div>
 
-        <!-- HEADER -->
+        <!-- HEADER (giữ nguyên từ trang home cải tiến) -->
         <header class="header">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="./index.html"><img src="../img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
+                    <a href="index.html"><img src="./img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="ti-menu"></i>
                 </div>
                 <ul class="menu">
                     <li><a href="index.html"><i class="ti-home"></i> Home</a></li>
                     <li><a href="about.html"><i class="ti-info-alt"></i> About</a></li>
                     <li class="has-submenu">
-                        <a href="products.html"><i class="ti-gift"></i> Products</a>
+                        <a href="products.html"><i class="ti-gift"></i> Products <i class="ti-angle-down"></i></a>
                         <ul class="submenu">
                             <li><a href="#"><i class="ti-bolt"></i> Flash Sale</a></li>
                             <li><a href="#"><i class="ti-medall-alt"></i> Best Seller</a></li>
@@ -38,12 +42,12 @@
                         <input type="text" placeholder="Tìm kiếm sản phẩm...">
                         <button><i class="ti-search"></i></button>
                     </div>
-                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span>Cart</span><span class="cart-count">3</span></a>
+                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span class="cart-count">3</span></a>
                     <div class="user-menu">
-                        <a href="#" class="user"><i class="ti-user"></i> <span>Account</span></a>
+                        <a href="#" class="user"><i class="ti-user"></i></a>
                         <ul class="user-dropdown">
-                            <li><a href="account.html"><i class="ti-user"></i> Tài khoản</a></li>
-                            <li><a href="#" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
+                            <li><a href="login.html"><i class="ti-user"></i> Tài khoản</a></li>
+                            <li><a href="login.html" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -51,57 +55,100 @@
         </header>
 
         <!-- PRODUCTS SECTION -->
-        <section class="products">
-            <h1>Sản phẩm công nghệ đỉnh cao</h1>
-            <div class="product-filter">
-                <select class="filter-select">
-                    <option value="all">Tất cả sản phẩm</option>
-                    <option value="laptop">Laptop</option>
-                    <option value="smartphone">Smartphone</option>
-                    <option value="watch">Đồng hồ thông minh</option>
-                </select>
-                <input type="text" class="search-input" placeholder="Tìm sản phẩm...">
-            </div>
-            <div class="product-list">
-                <div class="product-item">
-                    <img src="./img/product/Laptop.png" alt="Laptop Dell">
-                    <h3>Laptop Dell Latitude L3540</h3>
-                    <p>Hiệu suất mạnh mẽ - Mượt mà từng tác vụ.</p>
-                    <p class="price">15,990,000 VNĐ</p>
-                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
+        <section class="products-section">
+            <div class="products-container">
+                <div class="products-filter">
+                    <h2>Lọc Sản Phẩm</h2>
+                    <div class="filter-group">
+                        <label>Danh mục:</label>
+                        <select>
+                            <option value="">Tất cả</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="iphone">iPhone</option>
+                            <option value="watch">Đồng hồ</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Giá:</label>
+                        <select>
+                            <option value="">Tất cả</option>
+                            <option value="0-10">Dưới 10 triệu</option>
+                            <option value="10-20">10 - 20 triệu</option>
+                            <option value="20-30">20 - 30 triệu</option>
+                            <option value="30+">Trên 30 triệu</option>
+                        </select>
+                    </div>
+                    <button class="filter-btn">Lọc ngay <i class="ti-filter"></i></button>
                 </div>
-                <div class="product-item">
-                    <img src="./img/product/DongHo.png" alt="Apple Watch">
-                    <h3>Apple Watch Series 10</h3>
-                    <p>Đẳng cấp trên cổ tay – Thời trang & Công nghệ.</p>
-                    <p class="price">8,990,000 VNĐ</p>
-                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
-                </div>
-                <div class="product-item">
-                    <img src="./img/product/Iphone.png" alt="iPhone 15">
-                    <h3>iPhone 15 Pro Max</h3>
-                    <p>Hiệu năng đỉnh cao – Chụp ảnh siêu nét.</p>
-                    <p class="price">29,990,000 VNĐ</p>
-                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
-                </div>
-                <div class="product-item">
-                    <img src="./img/product/Iphone.png" alt="iPhone 15">
-                    <h3>iPhone 15 Pro Max</h3>
-                    <p>Hiệu năng đỉnh cao – Chụp ảnh siêu nét.</p>
-                    <p class="price">29,990,000 VNĐ</p>
-                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
-                </div>
-                <div class="product-item">
-                    <img src="./img/product/Laptop.png" alt="Laptop Dell">
-                    <h3>Laptop Dell Latitude L3540</h3>
-                    <p>Hiệu suất mạnh mẽ - Mượt mà từng tác vụ.</p>
-                    <p class="price">15,990,000 VNĐ</p>
-                    <button>Mua ngay <i class="ti-shopping-cart"></i></button>
+                <div class="products-content">
+                    <h2>Tất Cả Sản Phẩm</h2>
+                    <div class="product-list">
+                        <div class="product-item">
+                            <img src="./img/product/Laptop.png" alt="Laptop Dell Latitude L3540">
+                            <h3>Laptop Dell Latitude L3540</h3>
+                            <p class="price">15,000,000 VNĐ</p>
+                            <p>Hiệu suất mạnh mẽ, thiết kế mỏng nhẹ, hoàn hảo cho công việc.</p>
+                            <div class="product-actions">
+                                <a href="infoproduct.html" class="detail-btn">Xem chi tiết <i class="ti-arrow-right"></i></a>
+                                <button class="buy-btn">Mua ngay <i class="ti-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/product/DongHo.png" alt="Apple Watch Series 10">
+                            <h3>Apple Watch Series 10</h3>
+                            <p class="price">10,000,000 VNĐ</p>
+                            <p>Thời trang và công nghệ kết hợp, theo dõi sức khỏe tối ưu.</p>
+                            <div class="product-actions">
+                                <a href="infoproduct.html" class="detail-btn">Xem chi tiết <i class="ti-arrow-right"></i></a>
+                                <button class="buy-btn">Mua ngay <i class="ti-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/product/Iphone.png" alt="iPhone 15 Pro Max">
+                            <h3>iPhone 15 Pro Max</h3>
+                            <p class="price">30,000,000 VNĐ</p>
+                            <p>Hiệu năng đỉnh cao, camera siêu nét, thiết kế titan sang trọng.</p>
+                            <div class="product-actions">
+                                <a href="infoproduct.html" class="detail-btn">Xem chi tiết <i class="ti-arrow-right"></i></a>
+                                <button class="buy-btn">Mua ngay <i class="ti-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/product/Laptop.png" alt="Laptop Dell Inspiron 5530">
+                            <h3>Laptop Dell Inspiron 5530</h3>
+                            <p class="price">20,000,000 VNĐ</p>
+                            <p>Màn hình sắc nét, cấu hình mạnh, đa nhiệm mượt mà.</p>
+                            <div class="product-actions">
+                                <a href="infoproduct.html" class="detail-btn">Xem chi tiết <i class="ti-arrow-right"></i></a>
+                                <button class="buy-btn">Mua ngay <i class="ti-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/product/Iphone.png" alt="iPhone 14 Pro">
+                            <h3>iPhone 14 Pro</h3>
+                            <p class="price">25,000,000 VNĐ</p>
+                            <p>Chip A16 mạnh mẽ, màn hình ProMotion 120Hz tuyệt đẹp.</p>
+                            <div class="product-actions">
+                                <a href="infoproduct.html" class="detail-btn">Xem chi tiết <i class="ti-arrow-right"></i></a>
+                                <button class="buy-btn">Mua ngay <i class="ti-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <img src="./img/product/DongHo.png" alt="Apple Watch SE">
+                            <h3>Apple Watch SE</h3>
+                            <p class="price">7,000,000 VNĐ</p>
+                            <p>Gọn nhẹ, giá hợp lý, hỗ trợ sức khỏe toàn diện.</p>
+                            <div class="product-actions">
+                                <a href="infoproduct.html" class="detail-btn">Xem chi tiết <i class="ti-arrow-right"></i></a>
+                                <button class="buy-btn">Mua ngay <i class="ti-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- FOOTER -->
+        <!-- FOOTER (giữ nguyên từ trang home) -->
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-about">
@@ -137,5 +184,15 @@
             <p class="copyright">© 2025 DSV Technology. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- JavaScript cho toggle menu trên mobile -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.menu');
+
+        navToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

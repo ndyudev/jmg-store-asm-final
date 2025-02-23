@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | DSV Shop</title>
-    <link rel="stylesheet" href="../style/css/about.css">
-    <link rel="stylesheet" href="../style/icon/themify-icons-font/themify-icons/themify-icons.css">
-    <link rel="icon" href="../img/DSVShop/LogoDSV.png">
+    <link rel="stylesheet" href="./style/css/style.css">
+    <link rel="stylesheet" href="./style/css/about.css">
+    <link rel="stylesheet" href="./style/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="icon" href="./img/DSVShop/LogoDSV.png">
 </head>
 <body>
     <div class="container">
         <!-- HEADING -->
-        <div class="heading">Tết Rộn Ràng - Săn Công Nghệ Cực Chất!</div>
+        <div class="heading">Khám Phá DSV Shop</div>
 
-        <!-- HEADER -->
+        <!-- HEADER (giữ nguyên từ trang home cải tiến) -->
         <header class="header">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="./index.html"><img src="../img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
+                    <a href="index.html"><img src="./img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="ti-menu"></i>
                 </div>
                 <ul class="menu">
                     <li><a href="index.html"><i class="ti-home"></i> Home</a></li>
                     <li><a href="about.html"><i class="ti-info-alt"></i> About</a></li>
                     <li class="has-submenu">
-                        <a href="products.html"><i class="ti-gift"></i> Products</a>
+                        <a href="products.html"><i class="ti-gift"></i> Products <i class="ti-angle-down"></i></a>
                         <ul class="submenu">
                             <li><a href="#"><i class="ti-bolt"></i> Flash Sale</a></li>
                             <li><a href="#"><i class="ti-medall-alt"></i> Best Seller</a></li>
@@ -38,12 +42,12 @@
                         <input type="text" placeholder="Tìm kiếm sản phẩm...">
                         <button><i class="ti-search"></i></button>
                     </div>
-                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span>Cart</span><span class="cart-count">3</span></a>
+                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span class="cart-count">3</span></a>
                     <div class="user-menu">
-                        <a href="#" class="user"><i class="ti-user"></i> <span>Account</span></a>
+                        <a href="#" class="user"><i class="ti-user"></i></a>
                         <ul class="user-dropdown">
-                            <li><a href="account.html"><i class="ti-user"></i> Tài khoản</a></li>
-                            <li><a href="#" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
+                            <li><a href="login.html"><i class="ti-user"></i> Tài khoản</a></li>
+                            <li><a href="login.html" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
                         </ul>
                     </div>
                 </div>
@@ -51,46 +55,66 @@
         </header>
 
         <!-- ABOUT SECTION -->
-        <section class="about">
-            <h1>Về Chúng Tôi</h1>
-            <div class="intro">
-                <p>DSV Technology là hệ sinh thái công nghệ hàng đầu, mang đến những sản phẩm công nghệ tiên tiến và dịch vụ chất lượng cao. Chúng tôi cam kết mang lại trải nghiệm mua sắm thông minh, giá cả cạnh tranh, và sự hài lòng tuyệt đối cho khách hàng. Với sứ mệnh phát triển bền vững, DSV không ngừng đổi mới để phục vụ cộng đồng.</p>
+        <section class="about-section">
+            <div class="about-container">
+                <!-- Intro -->
+                <div class="about-intro">
+                    <div class="intro-text">
+                        <h2>DSV Shop - Công Nghệ Đỉnh Cao Trong Tay Bạn</h2>
+                        <p>Chào mừng bạn đến với DSV Shop – nơi công nghệ không chỉ là sản phẩm, mà là phong cách sống! Từ những chiếc iPhone mới nhất, laptop mạnh mẽ, đến đồng hồ thông minh thời thượng, chúng tôi mang đến những trải nghiệm tuyệt vời với chất lượng hàng đầu.</p>
+                        <p>Ra đời năm 2020, DSV Shop đã phục vụ hơn 50.000 khách hàng trên toàn quốc, với sứ mệnh biến công nghệ thành người bạn đồng hành thân thiết trong cuộc sống hiện đại.</p>
+                        <button class="explore-btn">Khám phá ngay <i class="ti-arrow-right"></i></button>
+                    </div>
+                    <div class="intro-image">
+                        <img src="./img/DSVShop/dsv-group.png" alt="DSV Shop Intro">
+                    </div>
+                </div>
+
+                <!-- Mission -->
+                <div class="about-mission">
+                    <div class="mission-image">
+                        <img src="./img/DSVShop/dsv-group.png" alt="DSV Shop Mission">
+                    </div>
+                    <div class="mission-text">
+                        <h2>Sứ Mệnh Của Chúng Tôi</h2>
+                        <p>Chúng tôi không chỉ bán sản phẩm – chúng tôi tạo ra giá trị! DSV Shop cam kết cung cấp công nghệ tiên tiến với giá cả cạnh tranh, dịch vụ tận tâm, và chính sách hậu mãi chu đáo. Mục tiêu của chúng tôi là giúp bạn tận hưởng cuộc sống thông minh hơn, tiện lợi hơn mỗi ngày.</p>
+                        <ul>
+                            <li><i class="ti-check"></i> Công nghệ chất lượng từ các thương hiệu hàng đầu.</li>
+                            <li><i class="ti-check"></i> Hỗ trợ 24/7, giao hàng siêu tốc.</li>
+                            <li><i class="ti-check"></i> Giá trị vượt mong đợi.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Team -->
+                <div class="about-team">
+                    <h2>Gặp Gỡ Đội Ngũ Đầy Đam Mê</h2>
+                    <p>Đằng sau DSV Shop là đội ngũ trẻ trung, nhiệt huyết, luôn sẵn sàng đồng hành cùng bạn trên hành trình khám phá công nghệ.</p>
+                    <div class="team-list">
+                        <div class="team-member">
+                            <img src="./img/DSVShop/team1.jpg" alt="Nguyễn Văn A">
+                            <h3>Nguyễn Văn A</h3>
+                            <p>CEO & Nhà sáng lập</p>
+                            <span>"Đưa công nghệ đến mọi nhà là giấc mơ của tôi!"</span>
+                        </div>
+                        <div class="team-member">
+                            <img src="./img/DSVShop/team2.jpg" alt="Trần Thị B">
+                            <h3>Trần Thị B</h3>
+                            <p>Quản lý Marketing</p>
+                            <span>"Kết nối khách hàng với sản phẩm hoàn hảo."</span>
+                        </div>
+                        <div class="team-member">
+                            <img src="./img/DSVShop/team3.jpg" alt="Lê Văn C">
+                            <h3>Lê Văn C</h3>
+                            <p>Trưởng nhóm Hỗ trợ Kỹ thuật</p>
+                            <span>"Giải pháp công nghệ luôn trong tầm tay."</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- TEAM SECTION -->
-        <section class="team">
-            <h2>Đội Ngũ Của Chúng Tôi</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="./img/team/member1.jpg" alt="Thành viên 1">
-                    <h3>Nguyễn Văn A</h3>
-                    <p>CEO - Nhà sáng lập</p>
-                </div>
-                <div class="team-member">
-                    <img src="./img/team/member2.jpg" alt="Thành viên 2">
-                    <h3>Trần Thị B</h3>
-                    <p>CTO - Giám đốc công nghệ</p>
-                </div>
-                <div class="team-member">
-                    <img src="./img/team/member3.jpg" alt="Thành viên 3">
-                    <h3>Lê Văn C</h3>
-                    <p>CMO - Giám đốc marketing</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section class="contact">
-            <h2>Liên Hệ Với Chúng Tôi</h2>
-            <div class="contact-info">
-                <p><i class="ti-location-pin"></i> Địa chỉ: 227 Bến Thành, Quận 1, TP. Hồ Chí Minh</p>
-                <p><i class="ti-mobile"></i> Điện thoại: 0787 544 232</p>
-                <p><i class="ti-email"></i> Email: support@dsvshop.com</p>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
+        <!-- FOOTER (giữ nguyên từ trang home) -->
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-about">
@@ -126,5 +150,15 @@
             <p class="copyright">© 2025 DSV Technology. All rights reserved.</p>
         </footer>
     </div>
+
+    <!-- JavaScript cho toggle menu trên mobile -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.menu');
+
+        navToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ | DSV Shop</title>
-    <link rel="stylesheet" href="../style/css/faq.css">
-    <link rel="stylesheet" href="../style/icon/themify-icons-font/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="./js/infoproduct.js">
-    <link rel="icon" href="../img/DSVShop/LogoDSV.png">
+    <link rel="stylesheet" href="./style/css/style.css">
+    <link rel="stylesheet" href="./style/css/faq.css">
+    <link rel="stylesheet" href="./style/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <link rel="icon" href="./img/DSVShop/LogoDSV.png">
 </head>
 <body>
     <div class="container">
-        <!-- HEADER -->
-        <div class="heading">Tết rộn ràng - Săn công nghệ cực chất!</div>
+        <!-- HEADING -->
+        <div class="heading">Giải Đáp Thắc Mắc Của Bạn</div>
+
+        <!-- HEADER (giữ nguyên từ trang home cải tiến) -->
         <header class="header">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html"><img src="../img/DSVShop/LogoDSV.png" alt="Logo"></a>
+                    <a href="index.html"><img src="./img/DSVShop/LogoDSV.png" alt="Logo DSV"></a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="ti-menu"></i>
                 </div>
                 <ul class="menu">
                     <li><a href="index.html"><i class="ti-home"></i> Home</a></li>
-                    <li><a href="about.html"><i class="ti-info"></i> About</a></li>
+                    <li><a href="about.html"><i class="ti-info-alt"></i> About</a></li>
                     <li class="has-submenu">
-                        <a href="products.html"><i class="ti-package"></i> Products</a>
+                        <a href="products.html"><i class="ti-gift"></i> Products <i class="ti-angle-down"></i></a>
                         <ul class="submenu">
-                            <li><a href="#"><i class="ti-desktop"></i> Flash Sale </a></li>
-                            <li><a href="#"><i class="ti-mobile"></i> Best Seller </a></li>
-                            <li><a href="#"><i class="ti-headphone-alt"></i> More </a></li>
+                            <li><a href="#"><i class="ti-bolt"></i> Flash Sale</a></li>
+                            <li><a href="#"><i class="ti-medall-alt"></i> Best Seller</a></li>
+                            <li><a href="#"><i class="ti-more"></i> More</a></li>
                         </ul>
                     </li>
                     <li><a href="faq.html"><i class="ti-help-alt"></i> FAQ</a></li>
@@ -34,83 +39,104 @@
                 </ul>
                 <div class="nav-icons">
                     <div class="search-box">
-                        <input type="text" placeholder="Tìm kiếm...">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm...">
                         <button><i class="ti-search"></i></button>
                     </div>
-                    <a href="cart" class="cart"><i class="ti-shopping-cart">Shopping</i></a>
+                    <a href="cart.html" class="cart"><i class="ti-shopping-cart-full"></i> <span class="cart-count">3</span></a>
                     <div class="user-menu">
-                        <a href="#" class="user"><i class="ti-user"> Account </i></a>
+                        <a href="#" class="user"><i class="ti-user"></i></a>
                         <ul class="user-dropdown">
-                            <li><a href="account.html">Tài khoản</a></li>
-                            <li><a href="#" id="logout-btn">Đăng xuất</a></li>
+                            <li><a href="login.html"><i class="ti-user"></i> Tài khoản</a></li>
+                            <li><a href="login.html" id="logout-btn"><i class="ti-shift-left"></i> Đăng xuất</a></li>
                         </ul>
-                    </div>                    
+                    </div>
                 </div>
             </nav>
-        </header>        
+        </header>
 
-        <!-- BANNER -->
-        <section class="banner">
-            <img src="../img/DSVShop/banner.dsvshop.png" alt="Banner" class="banner-img">
-        </section>
-
- <!-- FAQ -->
-        <section id="faq" class="faq">
-            <h2>Câu hỏi thường gặp</h2>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <button class="accordion-button" type="button">
-                        <span class="accordion-icon">+</span>
-                        Làm thế nào để đặt hàng?
-                    </button>
-                    <div class="accordion-panel">
-                        <p>Bạn có thể đặt hàng trực tiếp trên website hoặc liên hệ với chúng tôi qua hotline để được hỗ trợ.</p>
+        <!-- FAQ SECTION -->
+        <section class="faq-section">
+            <div class="faq-container">
+                <h2>Câu Hỏi Thường Gặp</h2>
+                <p>Dưới đây là những câu hỏi phổ biến mà khách hàng thường thắc mắc khi mua sắm tại DSV Shop. Nếu bạn không tìm thấy câu trả lời, hãy <a href="contact.html">liên hệ chúng tôi</a> ngay!</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="ti-help-alt"></i> Làm sao để đặt hàng tại DSV Shop?</h3>
+                            <i class="ti-angle-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Đặt hàng tại DSV Shop rất dễ! Bạn chỉ cần:</p>
+                            <ul>
+                                <li>Truy cập <a href="products.html">danh mục sản phẩm</a>.</li>
+                                <li>Chọn sản phẩm yêu thích và nhấn "Thêm vào giỏ".</li>
+                                <li>Vào giỏ hàng, điền thông tin giao hàng và chọn phương thức thanh toán.</li>
+                            </ul>
+                            <p>Chỉ vài bước đơn giản, sản phẩm sẽ được giao đến tay bạn nhanh chóng!</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <button class="accordion-button" type="button">
-                        <span class="accordion-icon">+</span>
-                        Thời gian giao hàng mất bao lâu?
-                    </button>
-                    <div class="accordion-panel">
-                        <p>Thời gian giao hàng thường từ 3-5 ngày làm việc, tùy vào địa chỉ của bạn. Các khu vực xa có thể mất nhiều thời gian hơn.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="ti-truck"></i> Thời gian giao hàng bao lâu?</h3>
+                            <i class="ti-angle-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Thời gian giao hàng phụ thuộc vào địa điểm của bạn:</p>
+                            <ul>
+                                <li><strong>TP.HCM:</strong> 1-2 ngày làm việc.</li>
+                                <li><strong>Các tỉnh khác:</strong> 3-5 ngày làm việc.</li>
+                            </ul>
+                            <p>Chúng tôi cung cấp giao hàng miễn phí toàn quốc và cập nhật trạng thái đơn hàng liên tục!</p>
+                        </div>
                     </div>
-                </div>
-        
-                <div class="accordion-item">
-                    <button class="accordion-button" type="button">
-                        <span class="accordion-icon">+</span>
-                        Tôi có thể đổi trả sản phẩm không?
-                    </button>
-                    <div class="accordion-panel">
-                        <p>Chúng tôi hỗ trợ đổi trả sản phẩm trong vòng 7 ngày nếu sản phẩm bị lỗi hoặc không đúng với mô tả. Vui lòng giữ lại hóa đơn để được hỗ trợ tốt nhất.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="ti-reload"></i> Tôi có thể đổi trả sản phẩm không?</h3>
+                            <i class="ti-angle-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Có chứ! DSV Shop hỗ trợ đổi trả trong vòng 7 ngày nếu:</p>
+                            <ul>
+                                <li>Sản phẩm bị lỗi kỹ thuật từ nhà sản xuất.</li>
+                                <li>Sản phẩm không đúng như mô tả trên website.</li>
+                            </ul>
+                            <p>Xem chi tiết tại <a href="#">Chính sách đổi trả</a> hoặc liên hệ hotline 0787 544 232.</p>
+                        </div>
                     </div>
-                </div>
-        
-                <div class="accordion-item">
-                    <button class="accordion-button" type="button">
-                        <span class="accordion-icon">+</span>
-                        Tôi có thể thanh toán bằng những phương thức nào?
-                    </button>
-                    <div class="accordion-panel">
-                        <p>Chúng tôi chấp nhận thanh toán qua thẻ tín dụng, chuyển khoản ngân hàng hoặc thanh toán khi nhận hàng (COD).</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="ti-wallet"></i> DSV Shop có hỗ trợ trả góp không?</h3>
+                            <i class="ti-angle-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Hiện tại, chúng tôi chưa hỗ trợ trả góp trực tiếp, nhưng bạn có thể:</p>
+                            <ul>
+                                <li>Sử dụng thẻ tín dụng để thanh toán qua các chương trình trả góp của ngân hàng.</li>
+                                <li>Liên hệ đội ngũ hỗ trợ để được tư vấn thêm.</li>
+                            </ul>
+                            <p>Chúng tôi đang phát triển dịch vụ trả góp, sẽ sớm ra mắt trong tương lai gần!</p>
+                        </div>
                     </div>
-                </div>
-        
-                <div class="accordion-item">
-                    <button class="accordion-button" type="button">
-                        <span class="accordion-icon">+</span>
-                        Làm thế nào để kiểm tra tình trạng đơn hàng?
-                    </button>
-                    <div class="accordion-panel">
-                        <p>Bạn có thể kiểm tra tình trạng đơn hàng bằng cách truy cập mục "Theo dõi đơn hàng" trên website và nhập mã đơn hàng của bạn.</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3><i class="ti-headphone"></i> Tôi liên hệ hỗ trợ bằng cách nào?</h3>
+                            <i class="ti-angle-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Bạn có thể liên hệ chúng tôi qua nhiều kênh:</p>
+                            <ul>
+                                <li><strong>Email:</strong> support@dsvshop.com</li>
+                                <li><strong>Hotline:</strong> 0787 544 232 (24/7)</li>
+                                <li><strong>Trang liên hệ:</strong> <a href="contact.html">Click đây</a></li>
+                            </ul>
+                            <p>Đội ngũ của chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn!</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- FOOTER -->
+        <!-- FOOTER (giữ nguyên từ trang home) -->
         <footer class="footer">
             <div class="footer-container">
                 <div class="footer-about">
@@ -118,33 +144,60 @@
                     <p>Hệ sinh thái công nghệ - Mua sắm thông minh, trải nghiệm đỉnh cao!</p>
                     <p><i class="ti-location-pin"></i> 227 Bến Thành, Quận 1, TP. Hồ Chí Minh</p>
                     <p><i class="ti-mobile"></i> 0787 544 232</p>
-                    <p><i class="ti-email"></i> support@jmaxgear.com</p>
+                    <p><i class="ti-email"></i> support@dsvshop.com</p>
                 </div>
                 <div class="footer-links">
                     <h3>Chính Sách</h3>
                     <ul>
-                        <li><a href="#">Chính sách bảo mật</a></li>
-                        <li><a href="#">Điều khoản sử dụng</a></li>
-                        <li><a href="#">Hỗ trợ khách hàng</a></li>
+                        <li><a href="#"><i class="ti-lock"></i> Chính sách bảo mật</a></li>
+                        <li><a href="#"><i class="ti-file"></i> Điều khoản sử dụng</a></li>
+                        <li><a href="#"><i class="ti-headphone"></i> Hỗ trợ khách hàng</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
-                    <h3>Theo dõi ngay để không bỏ lỡ ưu đãi!</h3>
+                    <h3>Theo dõi chúng tôi</h3>
                     <div class="social-icons">
                         <a href="#"><i class="ti-facebook"></i></a>
-                        <a href="#"><i class="ti-twitter-alt"></i></a>
+                        <a href="#"><i class="ti-twitter"></i></a>
                         <a href="#"><i class="ti-instagram"></i></a>
-                        <a href="#"><i class="ti-youtube"></i></a>
+                        <a href="#"><i class="ti-youtube"></a>
                     </div>
                     <h3>Đăng Ký Nhận Tin</h3>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Đăng ký ngay để nhận tin tức & khuyến mãi hot!" required>
-                        <button type="submit">Nhận ngay ưu đãi!</button>
+                        <input type="email" placeholder="Nhập email nhận ưu đãi..." required>
+                        <button type="submit"><i class="ti-arrow-right"></i> Đăng ký</button>
                     </form>
                 </div>
             </div>
             <p class="copyright">© 2025 DSV Technology. All rights reserved.</p>
-        </footer>                  
+        </footer>
     </div>
+
+    <!-- JavaScript cho accordion và toggle menu -->
+    <script>
+        // Toggle menu trên mobile
+        const navToggle = document.querySelector('.nav-toggle');
+        const menu = document.querySelector('.menu');
+        navToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('.ti-angle-down, .ti-angle-up');
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.classList.remove('ti-angle-up');
+                    icon.classList.add('ti-angle-down');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.remove('ti-angle-down');
+                    icon.classList.add('ti-angle-up');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
